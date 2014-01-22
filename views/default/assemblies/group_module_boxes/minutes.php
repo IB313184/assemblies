@@ -48,7 +48,7 @@ if (count($assemblies)) {
 	foreach ($assemblies as $assembly) {
 		echo "<li>".elgg_view('output/url', array(
         		'href' => "assembly/view/$assembly->guid",
-		        'text' => gmdate("Y-m-d", $assembly->date),
+		        'text' => gmdate(elgg_echo('crud:date_format'), $assembly->date),
 			))."</li>";
 	}
 	echo "</ul>";
